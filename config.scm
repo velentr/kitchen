@@ -7,4 +7,6 @@
        ruby-listen
        ruby-rails
        ruby-sqlite3
-       ruby-tzinfo-data))
+       ruby-tzinfo-data
+       ;; for lsp
+       ruby-solargraph))
