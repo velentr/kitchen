@@ -18,3 +18,5 @@ end
 gem 'tzinfo-data'
 
 gem 'kramdown'
+
+gem 'sprockets'

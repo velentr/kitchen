@@ -7,6 +7,7 @@
        ruby-listen
        ruby-kramdown
        ruby-rails
+       ruby-sprockets-rails
        ruby-sqlite3
        ruby-tzinfo-data
        ;; for lsp
