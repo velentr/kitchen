@@ -1,6 +1,26 @@
 body {
     font-size: 1em;
     line-height: 1.5em;
-    margin: 2em auto;
+    margin-top: 2em;
+    margin-left: 35%;
+    left: 17em;
     max-width: 35em;
+}
+
+.sidebar {
+    height: 100%;
+    width: 15em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 2em;
+    padding-left: 2em;
+    background-color: #002b36;  /* S_base03 */
+    color: #839496;             /* S_base0  */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #839496;
 }

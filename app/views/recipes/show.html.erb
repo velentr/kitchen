@@ -1,10 +1,9 @@
 <h1><%= @recipe.title %></h1>
 
+<h5>ingredients</h5>
 <%= sanitize(Kramdown::Document.new(@recipe.ingredients).to_html) %>
 
+<h5>steps</h5>
 <%= sanitize(Kramdown::Document.new(@recipe.body).to_html) %>
 
-<ul>
-  <li><%= link_to "edit", edit_recipe_path %></li>
-  <li><%= link_to "all recipes", root_path %></li>
-</ul>
+<%= link_to "edit", edit_recipe_path %>

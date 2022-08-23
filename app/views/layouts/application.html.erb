@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div class="sidebar">
+      <h3>kitchen</h3>
+      <p><%= link_to "all recipes", root_path %></p>
+      <p><%= link_to "new recipe", new_recipe_path %></p>
+    </div>
     <%= yield %>
   </body>
 </html>
