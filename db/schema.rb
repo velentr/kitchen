@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_23_133719) do
+ActiveRecord::Schema.define(version: 2022_08_23_185449) do
+
+  create_table "cooks", force: :cascade do |t|
+    t.integer "recipe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_cooks_on_recipe_id"
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "title"
@@ -21,4 +28,5 @@ ActiveRecord::Schema.define(version: 2022_08_23_133719) do
     t.text "description", default: ""
   end
 
+  add_foreign_key "cooks", "recipes"
 end
