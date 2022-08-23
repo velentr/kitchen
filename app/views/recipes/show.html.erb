@@ -1,5 +1,7 @@
 <h1><%= @recipe.title %></h1>
 
+<%= sanitize(Kramdown::Document.new(@recipe.description).to_html) %>
+
 <h5>ingredients</h5>
 <%= sanitize(Kramdown::Document.new(@recipe.ingredients).to_html) %>
 
