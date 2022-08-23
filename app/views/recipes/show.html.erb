@@ -1,3 +1,5 @@
+<%= render "grid", cells: @recipe.count_cooks %>
+
 <h1><%= @recipe.title %></h1>
 
 <%= sanitize(Kramdown::Document.new(@recipe.description).to_html) %>
