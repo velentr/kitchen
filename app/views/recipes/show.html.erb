@@ -9,3 +9,7 @@
 <%= sanitize(Kramdown::Document.new(@recipe.body).to_html) %>
 
 <%= link_to "edit", edit_recipe_path %>
+
+<%= form_with model: [ @recipe, @recipe.cooks.build ] do |form| %>
+<%= form.submit "cook this" %>
+<% end %>
