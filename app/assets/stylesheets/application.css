@@ -24,3 +24,41 @@ body {
     text-decoration: none;
     color: #839496;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 15px;
+    margin-left: 18em; /* immediately right of sidebar */
+    position: absolute;
+    left: 0;
+}
+
+div.cell {
+    height: 15px;
+    padding: 1px;
+}
+
+div.cell-0 {
+    background-color: #fdf6e3;
+}
+div.cell-1 {
+    background-color: #eee8d5;
+}
+div.cell-2 {
+    background-color: #93a1a1;
+}
+div.cell-3 {
+    background-color: #839496;
+}
+div.cell-4 {
+    background-color: #657b83;
+}
+div.cell-5 {
+    background-color: #586e75;
+}
+div.cell-6 {
+    background-color: #073642;
+}
+div.cell-7 {
+    background-color: #002b36;
+}

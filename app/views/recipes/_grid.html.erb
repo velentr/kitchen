@@ -1,0 +1,5 @@
+<div class="grid">
+<% cells.each do |val| %>
+  <%= sanitize(format("<div class=\"cell cell-%d\"></div>\n", val > 7 ? 7 : val)) %>
+<% end %>
+</div>
