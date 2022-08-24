@@ -1,7 +1,7 @@
 <%= form_with model: recipe do |form| %>
 
 <div>
-  <%= form.label :title %>
+  <div><%= form.label :title, "name" %></div>
   <%= form.text_field :title %>
   <% recipe.errors.full_messages_for(:title).each do |message| %>
   <div><%= message %></div>
@@ -9,7 +9,7 @@
 </div>
 
 <div>
-  <%= form.label :description %>
+  <div><%= form.label :description, "description" %></div>
   <%= form.text_area :description %>
   <% recipe.errors.full_messages_for(:description).each do |message| %>
   <div><%= message %></div>
@@ -17,7 +17,7 @@
 </div>
 
 <div>
-  <%= form.label :ingredients %>
+  <div><%= form.label :ingredients, "ingredients" %></div>
   <%= form.text_area :ingredients %>
   <% recipe.errors.full_messages_for(:ingredients).each do |message| %>
   <div><%= message %></div>
@@ -25,7 +25,7 @@
 </div>
 
 <div>
-  <%= form.label :body %>
+  <div><%= form.label :body, "directions" %></div>
   <%= form.text_area :body %>
   <% recipe.errors.full_messages_for(:body).each do |message| %>
   <div><%= message %></div>
@@ -33,7 +33,7 @@
 </div>
 
 <div>
-  <%= form.submit %>
+  <%= form.submit "create recipe" %>
 </div>
 
 <% end %>

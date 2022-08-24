@@ -62,3 +62,24 @@ div.cell-6 {
 div.cell-7 {
     background-color: #002b36;
 }
+
+/* Style the input and textarea boxes for creating recipes */
+textarea {
+    width: 100%;
+}
+
+textarea#recipe_description {
+    height: 3em;
+}
+
+textarea#recipe_ingredients {
+    height: 35em;
+}
+
+textarea#recipe_body {
+    height: 35em;
+}
+
+input#recipe_title {
+    width: 100%;
+}
