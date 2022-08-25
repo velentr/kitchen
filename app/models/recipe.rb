@@ -6,6 +6,10 @@ def months_between(start, finish)
   (finish.year * 12 + finish.month) - (start.year * 12 + start.month)
 end
 
+def weeks_between(start, finish)
+  (finish.year * 52 + finish.cweek) - (start.year * 52 + finish.cweek)
+end
+
 # Model for recipes in the database
 class Recipe < ApplicationRecord
   has_many :cooks
@@ -18,6 +22,16 @@ class Recipe < ApplicationRecord
     num_cells = 36
     all_cooks = cooks.where('created_at > ?', num_cells.months.ago).group_by do |cook|
       months_between(DateTime.now, cook.created_at)
+    end
+    (0..num_cells - 1).map do |i|
+      all_cooks[i].nil? ? 0 : all_cooks[i].length
+    end
+  end
+
+  def self.count_all_cooks
+    num_cells = 52
+    all_cooks = Cook.where('created_at > ?', num_cells.weeks.ago).group_by do |cook|
+      weeks_between(DateTime.now, cook.created_at.to_date)
     end
     (0..num_cells - 1).map do |i|
       all_cooks[i].nil? ? 0 : all_cooks[i].length
