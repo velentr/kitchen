@@ -1,10 +1,10 @@
 # ignore database files
-/db/*.sqlite3
-/db/*.sqlite3-*
+/lib/db/*.sqlite3
+/lib/db/*.sqlite3-*
 
 # ignore all logfiles and tempfiles
-/log/*
-/tmp/*
+/lib/log/*
+/lib/tmp/*
 
 # compiled stylesheet files
 /public/assets
