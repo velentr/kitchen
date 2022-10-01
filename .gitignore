@@ -6,8 +6,5 @@
 /lib/log/*
 /lib/tmp/*
 
-# compiled stylesheet files
-/public/assets
-
 # don't check in the lockfile; this is pinned in guix
 Gemfile.lock

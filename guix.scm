@@ -15,7 +15,7 @@
   (list #:tests? #f))  ;; I haven't written any real tests yet
  (propagated-inputs
   (list ruby-2.7 ruby-byebug ruby-listen ruby-kramdown ruby-puma ruby-rails
-        ruby-sprockets-rails ruby-sqlite3 ruby-tzinfo-data))
+        ruby-sqlite3 ruby-tzinfo-data))
  (native-inputs (list ruby-solargraph))  ;; for LSP
  (synopsis "Personal recipe tracker")
  (description "Kitchen is a personal recipe/cooking tracker that aims to be a
