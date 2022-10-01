@@ -19,6 +19,7 @@ how often you cook them.'
   s.executables  = ['kitchen']
 
   s.add_dependency 'kramdown'
+  s.add_dependency 'puma'
   s.add_dependency 'rails', '>= 6.1.0'
   s.add_dependency 'sprockets'
   s.add_dependency 'sqlite3'
