@@ -2,20 +2,7 @@
 
 # frozen_string_literal: true
 
-lib_path = File.expand_path('../lib', __dir__)
-
-if File.exist? lib_path
-  # When run from the source directory, the app path can be found
-  # relative to this directory
-  APP_PATH = File.expand_path('../lib/config/application', __dir__)
-else
-  # When installed as a gem (e.g. under guix), search $LOAD_PATH to
-  # find the location of the rails app
-  module_path = $LOAD_PATH.select do |path|
-    path.include? 'kitchen'
-  end[0]
-  APP_PATH = File.join(module_path, 'config/application')
-end
+APP_PATH = File.expand_path('../lib/config/application', __dir__)
 
 require 'rails/command'
 
