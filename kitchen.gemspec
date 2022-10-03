@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'kitchen'
-  s.version     = 0
+  s.version     = '0.0.0'
   s.summary     = 'Personal recipe tracker'
   s.description = 'Kitchen is a personal recipe/cooking tracker that
 aims to be a self-hosted way of collecting your favorite recipes and
