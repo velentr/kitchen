@@ -4,6 +4,12 @@
 
 APP_PATH = File.expand_path('../lib/config/application', __dir__)
 
+# I don't actually make use of the secret key anywhere (nginx handles
+# all my security), so I can just generate this randomly on each
+# startup
+require 'securerandom'
+ENV['SECRET_KEY_BASE'] = SecureRandom.hex(64)
+
 require 'rails/command'
 
 Rails::Command.invoke 'db:prepare',
