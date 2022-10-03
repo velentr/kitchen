@@ -6,7 +6,8 @@ APP_PATH = File.expand_path('../lib/config/application', __dir__)
 
 require 'rails/command'
 
-Rails::Command.invoke 'db:prepare', ARGV
+Rails::Command.invoke 'db:prepare',
+                      ['--rakefile', File.expand_path('../lib/Rakefile', __dir__)]
 
 # Rails annoyingly wnats to write to APP_PATH/tmp if we invoke the
 # 'server' command; on guix, this path is readonly. Bypass rails
