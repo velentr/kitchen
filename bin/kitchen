@@ -11,5 +11,7 @@ Rails::Command.invoke 'db:prepare', ARGV
 # Rails annoyingly wnats to write to APP_PATH/tmp if we invoke the
 # 'server' command; on guix, this path is readonly. Bypass rails
 # entirely, since puma doesn't require writing here.
-exec 'puma', '--environment', ENV['RAILS_ENV'] || 'development',
+exec 'puma',
+     '--environment', ENV['RAILS_ENV'] || 'development',
+     '--pidfile', ENV['KITCHEN_PID_FILE'] || '/var/run/kitchen.pid',
      File.expand_path('../../config.ru', APP_PATH)
